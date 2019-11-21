@@ -27,9 +27,12 @@ class HomeScreen extends React.Component {
     const marginTopBox = borderRadius + 50;
 
     return (
-      <View style={{flex: 1, flexDirection: 'column'}}onLayout={this.onLayoutView}>
-        <View style={{flex: 1, backgroundColor:"#000080"}} />
-        <View style={{flex: 1, backgroundColor: '#f2f2f2', flexDirection: 'row'}}>
+      <View
+        style={{flex: 1, flexDirection: 'column'}}
+        onLayout={this.onLayoutView}>
+        <View style={{flex: 1, backgroundColor: '#000080'}} />
+        <View
+          style={{flex: 1, backgroundColor: '#f2f2f2', flexDirection: 'row'}}>
           <View
             style={{
               flex: 1,
@@ -60,26 +63,18 @@ class HomeScreen extends React.Component {
             top,
             left,
             flexDirection: 'column',
-}}>
+          }}>
           <View style={{...styles.item, flex: 2}}>
-            <Text>test</Text>
+            <View style={styles.magnifyingGlass}>
+              <View style={styles.magnifyingGlassCircle} />
+              <View style={styles.crossUp} />
+              <View style={styles.crossFlat} />
+            </View>
           </View>
-          <View style={{...styles.item, flex: 1, justifyContent: 'flex-start'}}>
-            <Text>test</Text>
+          <View style={{...styles.item, flex: 1, justifyContent:'flex-start'}}>
+            <Text>Create video</Text>
           </View>
         </View>
-      </View>
-    );
-  }
-
-  render1() {
-    return (
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>Home!</Text>
-        <Button
-          title="Go to Settings"
-          onPress={() => this.props.navigation.navigate('Settings')}
-        />
       </View>
     );
   }
@@ -115,7 +110,43 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: 'black',
+    //borderWidth: 1,
+    //borderColor: 'black',
+  },
+  magnifyingGlass: {
+    //marginLeft: -90,
+    //marginTop: -20,
+  },
+  magnifyingGlassCircle: {
+    //width: 18,
+    //height: 18,
+    // borderRadius: 9,
+    //borderWidth: 2,
+    //borderColor: '#3780ff',
+  },
+
+  crossUp: {
+    backgroundColor: '#9999ff',
+    height: 56,
+    width: 12,
+    position: 'absolute',
+    left: -6,
+    top: 0,
+    borderTopRightRadius: 6,
+    borderTopLeftRadius: 6,
+    borderBottomRightRadius: 6,
+    borderBottomLeftRadius: 6,
+  },
+  crossFlat: {
+    backgroundColor: '#9999ff',
+    height: 12,
+    width: 56,
+    position: 'absolute',
+    left: -28,
+    top: 22,
+    borderTopRightRadius: 6,
+    borderTopLeftRadius: 6,
+    borderBottomRightRadius: 6,
+    borderBottomLeftRadius: 6,
   },
 });
