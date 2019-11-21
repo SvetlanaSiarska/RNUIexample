@@ -28,8 +28,8 @@ class HomeScreen extends React.Component {
 
     return (
       <View style={{flex: 1, flexDirection: 'column'}}onLayout={this.onLayoutView}>
-        <View style={{flex: 1, backgroundColor: 'blue'}} />
-        <View style={{flex: 1, backgroundColor: 'red', flexDirection: 'row'}}>
+        <View style={{flex: 1, backgroundColor:"#000080"}} />
+        <View style={{flex: 1, backgroundColor: '#f2f2f2', flexDirection: 'row'}}>
           <View
             style={{
               flex: 1,
